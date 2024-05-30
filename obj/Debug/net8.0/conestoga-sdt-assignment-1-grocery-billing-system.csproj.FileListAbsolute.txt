@@ -12,3 +12,4 @@ D:\Developer\Conestoga\conestoga-software-development-technics\conestoga-sdt-ass
 D:\Developer\Conestoga\conestoga-software-development-technics\conestoga-sdt-assignment-1-grocery-billing-system\obj\Debug\net8.0\conestoga-sdt-assignment-1-grocery-billing-system.pdb
 D:\Developer\Conestoga\conestoga-software-development-technics\conestoga-sdt-assignment-1-grocery-billing-system\obj\Debug\net8.0\conestoga-sdt-assignment-1-grocery-billing-system.genruntimeconfig.cache
 D:\Developer\Conestoga\conestoga-software-development-technics\conestoga-sdt-assignment-1-grocery-billing-system\obj\Debug\net8.0\ref\conestoga-sdt-assignment-1-grocery-billing-system.dll
+D:\Developer\Conestoga\conestoga-software-development-technics\conestoga-sdt-assignment-1-grocery-billing-system\obj\Debug\net8.0\conestoga-sdt-assignment-1-grocery-billing-system.sourcelink.json
