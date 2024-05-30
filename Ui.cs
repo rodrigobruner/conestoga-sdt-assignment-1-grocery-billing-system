@@ -1,4 +1,10 @@
+/**
+*   This class centralizes all the user interface functions
+**/
+
 static class UI{
+
+    //Show the system header
     public static void SystemHeader()
     {
         Console.Clear();
@@ -10,38 +16,47 @@ static class UI{
         Console.WriteLine("#----------------------------------#\n\n");
     }
 
+    //Ask, recive and validate a string answer
     public static int IntField(string question)
     {
         int number;
-        do{
+        do{ //while number is less than 0
+
+            // show the question on console
             Console.WriteLine(question);
-            string? sNumber = Console.ReadLine();
+        
+            // recive the answer
+            string? sNumber = Console.ReadLine(); 
+        
+            // Tray parse string to int
             bool parseResult = int.TryParse(sNumber! , out number);
+            //If is not successeful show a error mensage
             if (!parseResult) {
                 ShowErrorMessages("Invalid number, please try again");
             }
         }while(number < 0);
-        return number;
+        return number; //Return informed number
     }
 
+//Ask, recive and validate a yes/no y/n answer
     public static bool YesNoField(string question)
     {
-        bool result = false;
-        bool valid = false;
+        bool result = false;    // recive the answer
+        bool valid = false;     // is a valid answer
         while (!valid)
         {
             Console.WriteLine($"{question} (Entre Y/N or YES/NO)");
             string? answer = Console.ReadLine();
-            answer = answer?.ToLower(); 
-            answer = answer?.Trim();
+            answer = answer?.ToLower();     //transfor string to lowercase
+            answer = answer?.Trim();        //remove whitespaces
     
-            if (answer == "y" || answer == "yes") {
+            if (answer == "y" || answer == "yes") { //check the answer is yes and return true
                 result = true;
                 valid = true;
-            } else if (answer == "n" || answer == "no") {
+            } else if (answer == "n" || answer == "no") { //check the answer is no and return false
                 result = false;
                 valid = true;
-            } else {
+            } else { //If answer is not yes or no show a error mensage
                 ShowErrorMessages("Invalid answer, please try again");
             }
         }
@@ -49,14 +64,14 @@ static class UI{
     }
     
     public static void ShowErrorMessages(string message){
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine(message);
-                Console.ResetColor();
+                Console.ForegroundColor = ConsoleColor.Red; // change font color to red
+                Console.WriteLine(message); //show menssage
+                Console.ResetColor(); // reset font color
     }
 
     public static void ShowSuccessMessages(string message){
-                Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine(message);
-                Console.ResetColor();
+                Console.ForegroundColor = ConsoleColor.Green; // change font color to green
+                Console.WriteLine(message); //show menssage
+                Console.ResetColor(); // change font color to red
     }
 }
