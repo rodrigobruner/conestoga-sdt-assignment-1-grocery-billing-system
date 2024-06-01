@@ -1,4 +1,4 @@
 # Conestoga College - Mobile Solutions Development
-## Software Development Techniques (PROG8146)
+## Mobile Application Development - iOS (PROG8471)
 
-![System demo](system-demo.gif)
+![System demo](screenshot.png)
